@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperative Food and Consumer Protection Department - Chengalpattu Region | Government of Tamil Nadu</title>
+    <meta name="description" content="Official Portal of the Cooperative Food and Consumer Protection Department, Chengalpattu Region, Government of Tamil Nadu. Details of cooperative societies, PDS, credit schemes, and citizen services.">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Google Fonts: Inter & Mukta Malar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Mukta+Malar:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. Top Utility Strip (DOR Style .topStrip) -->
+    <div class="topStrip" role="region" aria-label="Accessibility &amp; Language Bar">
+        <div class="topStrip-left">
+            <a href="#main-content">
+                <span class="lang-en">Skip to main content</span>
+                <span class="lang-ta">முதன்மை உள்ளடக்கத்திற்குச் செல்க</span>
+            </a>
+            <a href="https://www.tn.gov.in/accessibility" class="external-nav-link" target="_blank" rel="noopener noreferrer">
+                <span class="lang-en">Screen Reader Access</span>
+                <span class="lang-ta">திரை ரீடர் அணுகல்</span>
+            </a>
+            <a href="#ofc_setup">
+                <span class="lang-en">Contact &amp; Sitemap</span>
+                <span class="lang-ta">வரைபடம்</span>
+            </a>
+        </div>
+        <div class="topStrip-right">
+            <!-- Theme Color Selector (dor.gov.in signature feature) -->
+            <div class="theme-pickers" title="Select Theme Color">
+                <span class="theme-circle default" onclick="setTheme('')" title="Default Navy Blue Theme"></span>
+                <span class="theme-circle red" onclick="setTheme('theme-red')" title="Crimson Red Theme"></span>
+                <span class="theme-circle green" onclick="setTheme('theme-green')" title="Forest Green Theme"></span>
+                <span class="theme-circle blue" onclick="setTheme('theme-blue')" title="Royal Blue Theme"></span>
+            </div>
+
+            <!-- Font Size Resizer Controls -->
+            <div class="font-controls">
+                <button class="text-resize-btn" onclick="changeFontSize(-1)" title="Decrease Font Size">A-</button>
+                <button class="text-resize-btn" onclick="changeFontSize(0)" title="Reset Font Size">A</button>
+                <button class="text-resize-btn" onclick="changeFontSize(1)" title="Increase Font Size">A+</button>
+            </div>
+
+            <!-- High Contrast Toggle -->
+            <button class="contrast-btn" onclick="toggleContrast()" title="Toggle High Contrast Mode">High Contrast</button>
+
+            <!-- Language Mode Selector -->
+            <select class="lang-select-box" id="langSelect" onchange="changeLanguageMode(this.value)" aria-label="Select Language Display Mode">
+                <option value="bilingual">English + தமிழ்</option>
+                <option value="en">English Only</option>
+                <option value="ta">தமிழ் மட்டும்</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- 2. Main Header (Official Tamil Nadu Branding) -->
+    <header class="main-header" role="banner">
+        <div class="logo-section">
+            <img src="tn_emblem.png" alt="Emblem of Tamil Nadu" class="logo-img">
+            <div class="header-text">
+                <div class="header-dept-ta lang-ta">கூட்டுறவு, உணவு மற்றும் நுகர்வோர் பாதுகாப்புத் துறை</div>
+                <div class="header-dept-en lang-en">Department of Cooperation, Food and Consumer Protection</div>
+                <div class="header-region">
+                    <span class="lang-en">CHENGALPATTU REGION</span>
+                    <span class="lang-ta">செங்கல்பட்டு மண்டலம்</span>
+                </div>
+                <div class="header-office">
+                    <span class="lang-en">Office of the Joint Registrar of Cooperative Societies</span>
+                    <span class="lang-ta">கூட்டுறவுச் சங்கங்களின் இணைப்பதிவாளர் அலுவலகம்</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-logos">
+            <img src="coop_logo.png" alt="Tamil Nadu Cooperatives Logo" class="coop-handshake-logo">
+            <a href="https://rcs.tn.gov.in/apanel/loginpage.php" target="_blank" rel="noopener noreferrer" class="portal-login-btn external-nav-link" title="Official RCS TN Department Login">
+                <span class="lang-en">DEPARTMENT LOGIN ↗</span>
+                <span class="lang-ta">துறை உள்நுழைவு</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- 3. Navigation Bar (with DOR 3D rotateMenu Animation) -->
+    <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-container">
+            <li class="nav-item active">
+                <a href="#main-content" class="nav-link">
+                    <span class="lang-en">HOME</span>
+                    <span class="lang-ta">முகப்பு</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#admin_setup" class="nav-link">
+                    <span class="lang-en">ABOUT US</span>
+                    <span class="lang-ta">எங்களைப் பற்றி</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link" aria-haspopup="true">
+                    <span class="lang-en">DEPARTMENTS &#9662;</span>
+                    <span class="lang-ta">துறைகள்</span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-item" role="none">
+                        <a href="#credit_setup" role="menuitem">
+                            <span class="lang-en">Credit Cooperatives</span>
+                            <span class="lang-ta">கூட்டுறவுக் கடன் சங்கங்கள்</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-item sub-dropdown" role="none">
+                        <a href="javascript:void(0);" role="menuitem" aria-haspopup="true">
+                            <span class="lang-en">Consumer Cooperatives &raquo;</span>
+                            <span class="lang-ta">நுகர்வோர் கூட்டுறவு &raquo;</span>
+                        </a>
+                        <ul class="sub-dropdown-menu" role="menu">
+                            <li class="dropdown-item" role="none">
+                                <a href="#societies_setup" role="menuitem">
+                                    <span class="lang-en">Consumer Cooperatives</span>
+                                    <span class="lang-ta">நுகர்வோர் கூட்டுறவுகள்</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item" role="none">
+                                <a href="#tier_setup" role="menuitem">
+                                    <span class="lang-en">Public Distribution System (PDS)</span>
+                                    <span class="lang-ta">பொது விநியோகத் திட்டம்</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-item" role="none">
+                        <a href="#initiatives_setup" role="menuitem">
+                            <span class="lang-en">Marketing &amp; Development</span>
+                            <span class="lang-ta">சந்தைப்படுத்தல் மற்றும் வளர்ச்சி</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-item" role="none">
+                        <a href="https://rcs.tn.gov.in/" target="_blank" rel="noopener noreferrer" class="external-nav-link" role="menuitem">
+                            <span class="lang-en">Cooperative Elections ↗</span>
+                            <span class="lang-ta">கூட்டுறவுத் தேர்தல்கள்</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link" aria-haspopup="true">
+                    <span class="lang-en">CITIZEN SERVICES &#9662;</span>
+                    <span class="lang-ta">குடிமக்கள் சேவைகள்</span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-item" role="none">
+                        <a href="https://rcs.tn.gov.in/loan/" target="_blank" rel="noopener noreferrer" class="external-nav-link" role="menuitem">
+                            <span class="lang-en">Online Loan Application ↗</span>
+                            <span class="lang-ta">ஆன்லைன் கடன் விண்ணப்பம்</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-item" role="none">
+                        <a href="https://rcs.tn.gov.in/rcsweb/evaadagai" target="_blank" rel="noopener noreferrer" class="external-nav-link" role="menuitem">
+                            <span class="lang-en">CO-OP e-Vaadagai Machinery ↗</span>
+                            <span class="lang-ta">கூட்டுறவு இ-வாடகை</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-item" role="none">
+                        <a href="https://www.tnpds.gov.in/" target="_blank" rel="noopener noreferrer" class="external-nav-link" role="menuitem">
+                            <span class="lang-en">PDS Smart Card Status ↗</span>
+                            <span class="lang-ta">ஸ்மார்ட் கார்டு நிலை</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-item" role="none">
+                        <a href="https://www.tn.gov.in/grievance/" target="_blank" rel="noopener noreferrer" class="external-nav-link" role="menuitem">
+                            <span class="lang-en">CM Helpline / Grievances Portal ↗</span>
+                            <span class="lang-ta">குறைதீர்ப்பு போர்டல்</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void(0);" class="nav-link" aria-haspopup="true">
+                    <span class="lang-en">INFORMATION &#9662;</span>
+                    <span class="lang-ta">தகவல்கள்</span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-item" role="none">
+                        <a href="https://rcs.tn.gov.in/" target="_blank" rel="noopener noreferrer" class="external-nav-link" role="menuitem">
+                            <span class="lang-en">Training Notes for Assistants ↗</span>
+                            <span class="lang-ta">உதவியாளர்களுக்கான பயிற்சி குறிப்புகள்</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-item" role="none">
+                        <a href="https://rcs.tn.gov.in/tncs-act-rules/" target="_blank" rel="noopener noreferrer" class="external-nav-link" role="menuitem">
+                            <span class="lang-en">TNCS Act 1983 &amp; Rules 1988 ↗</span>
+                            <span class="lang-ta">கூட்டுறவுச் சட்டம் மற்றும் விதிகள்</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-item" role="none">
+                        <a href="https://rtionline.tn.gov.in/" target="_blank" rel="noopener noreferrer" class="external-nav-link" role="menuitem">
+                            <span class="lang-en">Right to Information (RTI) Portal ↗</span>
+                            <span class="lang-ta">தகவல் அறியும் உரிமை (RTI)</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#ofc_setup" class="nav-link">
+                    <span class="lang-en">CONTACT US</span>
+                    <span class="lang-ta">தொடர்புக்கு</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 4. LATEST UPDATES / WHAT'S NEW TICKER (Signature DOR Feature) -->
+    <div class="whatsNew-strip" role="region" aria-label="Latest Announcements">
+        <div class="whatsNew-badge">
+            <span class="pulse-dot"></span>
+            <span class="lang-en">WHAT'S NEW</span>
+            <span class="lang-ta">புதியவை</span>
+        </div>
+        <div class="ticker-container" id="tickerContainer">
+            <div class="ticker-track" id="tickerTrack">
+                <div class="ticker-item">
+                    <span class="ticker-tag">LOAN SCHEMES</span>
+                    <a href="https://rcs.tn.gov.in/loan/" target="_blank" rel="noopener noreferrer" class="external-nav-link">
+                        KCC Crop Loans at 7% interest rate through Primary Agricultural Cooperative Credit Societies (PACS) — Apply Online ↗
+                    </a>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-tag">FARM MACHINERY</span>
+                    <a href="https://rcs.tn.gov.in/rcsweb/evaadagai" target="_blank" rel="noopener noreferrer" class="external-nav-link">
+                        CO-OP e-Vaadagai: 24 Custom Hiring Centres established in Chengalpattu Region for farmers ↗
+                    </a>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-tag">PDS WELFARE</span>
+                    <a href="#initiatives_setup">
+                        Thayumanavar Scheme delivers essential PDS goods directly to doorsteps of 70+ seniors and differently-abled cardholders
+                    </a>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-tag">PHARMACIES</span>
+                    <a href="#initiatives_setup">
+                        Mudhalvar Marundhagam: 8 Cooperative pharmacies in Chengalpattu provide 20% discount on essential generic medicines
+                    </a>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-tag">WAIVER DATA</span>
+                    <a href="#waiver_setup">
+                        Regional Waivers: ₹123.24 Cr Crop Loans &amp; ₹74.04 Cr Jewel Loans waived in Chengalpattu Region
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="ticker-control-btn" id="tickerToggleBtn" onclick="toggleTicker()" title="Pause/Play Ticker" aria-label="Pause Ticker">⏸ Pause</button>
+    </div>
+
+    <!-- 5. SPOTLIGHT / QUICK SERVICES CARDS (DOR Style Service Grid) -->
+    <div class="spotlight-wrapper">
+        <div class="spotlight-grid">
+            <div class="spotlight-card">
+                <div>
+                    <div class="spotlight-icon-wrap">📋</div>
+                    <h4>
+                        <span class="lang-en">Online Loan Application</span>
+                        <span class="lang-ta">ஆன்லைன் கடன் விண்ணப்பம்</span>
+                    </h4>
+                    <p>
+                        <span class="lang-en">Apply online for Crop, Animal Husbandry, Housing, and SHG loans via official RCS portal.</span>
+                        <span class="lang-ta">பயிர்க்கடன், கால்நடை மற்றும் சுயஉதவிக்குழு கடன்களுக்கு அதிகாரப்பூர்வ போர்ட்டலில் விண்ணப்பிக்கவும்.</span>
+                    </p>
+                </div>
+                <a href="https://rcs.tn.gov.in/loan/" target="_blank" rel="noopener noreferrer" class="spotlight-btn external-nav-link">
+                    <span>Apply for Loan</span>
+                    <span class="external-icon">↗</span>
+                </a>
+            </div>
+
+            <div class="spotlight-card">
+                <div>
+                    <div class="spotlight-icon-wrap">🚜</div>
+                    <h4>
+                        <span class="lang-en">CO-OP e-Vaadagai</span>
+                        <span class="lang-ta">கூட்டுறவு இ-வாடகை</span>
+                    </h4>
+                    <p>
+                        <span class="lang-en">Book modern agricultural tractors, harvesters and tools at nominal rental charges.</span>
+                        <span class="lang-ta">விவசாய இயந்திரங்கள் மற்றும் டிராக்டர்களை குறைந்த வாடகையில் முன்பதிவு செய்யவும்.</span>
+                    </p>
+                </div>
+                <a href="https://rcs.tn.gov.in/rcsweb/evaadagai" target="_blank" rel="noopener noreferrer" class="spotlight-btn external-nav-link">
+                    <span>Book Machinery</span>
+                    <span class="external-icon">↗</span>
+                </a>
+            </div>
+
+            <div class="spotlight-card">
+                <div>
+                    <div class="spotlight-icon-wrap">💳</div>
+                    <h4>
+                        <span class="lang-en">TN PDS Smart Card</span>
+                        <span class="lang-ta">ரேஷன் அட்டை சேவைகள்</span>
+                    </h4>
+                    <p>
+                        <span class="lang-en">Track smart family card applications, view Fair Price Shop entitlement and distribution details.</span>
+                        <span class="lang-ta">குடும்ப அட்டை விண்ணப்ப நிலை மற்றும் நியாயவிலைக் கடை ஒதுக்கீடு விவரங்களை அறியவும்.</span>
+                    </p>
+                </div>
+                <a href="https://www.tnpds.gov.in/" target="_blank" rel="noopener noreferrer" class="spotlight-btn external-nav-link">
+                    <span>Track Smart Card</span>
+                    <span class="external-icon">↗</span>
+                </a>
+            </div>
+
+            <div class="spotlight-card">
+                <div>
+                    <div class="spotlight-icon-wrap">⚖️</div>
+                    <h4>
+                        <span class="lang-en">RTI Online Portal</span>
+                        <span class="lang-ta">தகவல் அறியும் உரிமை</span>
+                    </h4>
+                    <p>
+                        <span class="lang-en">Submit Right to Information applications and appeals online to Tamil Nadu public authorities.</span>
+                        <span class="lang-ta">தமிழ்நாடு அரசுத் துறைகளிடம் தகவல் அறியும் உரிமை சட்டத்தின் கீழ் விண்ணப்பிக்கவும்.</span>
+                    </p>
+                </div>
+                <a href="https://rtionline.tn.gov.in/" target="_blank" rel="noopener noreferrer" class="spotlight-btn external-nav-link">
+                    <span>File RTI Request</span>
+                    <span class="external-icon">↗</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Main Content Layout (Sidebar + Main Area) -->
+    <div class="main-wrapper" id="main-content">
+        
+        <!-- Left Sidebar Navigation -->
+        <aside class="sidebar" role="complementary" aria-label="Section Navigation">
+            <h3 class="sidebar-title">
+                <span class="lang-en">Navigation Menu</span>
+                <span class="lang-ta">வழிசெலுத்தல் பட்டி</span>
+            </h3>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item active">
+                    <a href="#admin_intro">
+                        <span class="lang-en">Administrations</span>
+                        <span class="lang-ta">நிர்வாகம்</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#admin_setup">
+                        <span class="lang-en">Administrative Set Up</span>
+                        <span class="lang-ta">நிர்வாக அமைப்பு</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#ofc_setup">
+                        <span class="lang-en">Head Office Details</span>
+                        <span class="lang-ta">தலைமை அலுவலக விவரங்கள்</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#societies_setup">
+                        <span class="lang-en">Cooperative Societies</span>
+                        <span class="lang-ta">கூட்டுறவு நிறுவனங்கள்</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#tier_setup">
+                        <span class="lang-en">Cooperative Tier System</span>
+                        <span class="lang-ta">கூட்டுறவு அடுக்கு முறை</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#initiatives_setup">
+                        <span class="lang-en">Government Initiatives</span>
+                        <span class="lang-ta">அரசின் முன்முயற்சிகள்</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#waiver_setup">
+                        <span class="lang-en">Loan Waivers Metrics</span>
+                        <span class="lang-ta">கடன் தள்ளுபடி புள்ளிவிவரங்கள்</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#credit_setup">
+                        <span class="lang-en">Key Credit Schemes</span>
+                        <span class="lang-ta">முக்கிய கடன் திட்டங்கள்</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-body" role="main">
+            
+            <!-- Administrations Section -->
+            <section id="admin_intro">
+                <h3 class="section-title">
+                    <span class="lang-en">Administrations</span>
+                    <span class="lang-ta">நிர்வாகம்</span>
+                </h3>
+                <p class="intro-paragraph lang-en">
+                    The Cooperative Department under the Government of Tamil Nadu is headed by the Hon'ble Minister for Cooperation and functions under the supervision of the Secretary to Government, Cooperation, Food and Consumer Protection Department. At the district level, the <strong>Chengalpattu Region</strong> is headed by the Joint Registrar of Cooperative Societies, who supervises the proper functioning of the cooperative societies and administrative divisions.
+                </p>
+                <p class="intro-paragraph lang-ta">
+                    தமிழ்நாடு அரசின் கூட்டுறவுத் துறையானது மாண்புமிகு கூட்டுறவுத் துறை அமைச்சரின் தலைமையில் இயங்குகிறது. இத்துறை கூட்டுறவு, உணவு மற்றும் நுகர்வோர் பாதுகாப்புத் துறையின் அரசுச் செயலாளரின் மேற்பார்வையின் கீழ் செயல்படுகிறது. மாவட்ட அளவில், <strong>செங்கல்பட்டு மண்டலம்</strong> கூட்டுறவுச் சங்கங்களின் இணைப்பதிவாளர் தலைமையில் செயல்படுகிறது. அவர் கூட்டுறவுச் சங்கங்கள் மற்றும் நிர்வாகப் பிரிவுகளின் முறையான செயல்பாட்டைக் கண்காணிக்கிறார்.
+                </p>
+                <p class="intro-paragraph lang-en">
+                    For proper administration, the Chengalpattu Region is divided into two circles on a territorial basis co-terminus to Revenue Divisions: <strong>Maduranthagam Circle</strong> and <strong>Chengalpattu Circle</strong>. Each circle is supervised by a Circle Deputy Registrar who handles statutory functions such as Inspection, Enquiry, Arbitration, Execution, and Liquidation.
+                </p>
+                <p class="intro-paragraph lang-ta">
+                    முறையான நிர்வாகத்திற்காக, செங்கல்பட்டு மண்டலம் வருவாய் கோட்டங்களின் அடிப்படையில் இரண்டு வட்டங்களாகப் பிரிக்கப்பட்டுள்ளது: <strong>மதுராந்தகம் வட்டம்</strong> மற்றும் <strong>செங்கல்பட்டு வட்டம்</strong>. ஒவ்வொரு வட்டமும் ஒரு வட்ட துணைப்பதிவாளரால் கண்காணிக்கப்படுகிறது, அவர் ஆய்வு, விசாரணை, நடுவர் தீர்ப்பு, நிறைவேற்றுதல் மற்றும் கலைப்பு போன்ற சட்டப்பூர்வ பணிகளைக் கையாள்வார்.
+                </p>
+                <p class="intro-paragraph lang-en">
+                    Additionally, there is a dedicated Public Distribution System (PDS) wing headed by the Deputy Registrar (PDS) to monitor and inspect the fair price shops in the district, ensuring the proper distribution of essential commodities.
+                </p>
+                <p class="intro-paragraph lang-ta">
+                    கூடுதலாக, மாவட்டத்தில் உள்ள நியாயவிலைக் கடைகளைக் கண்காணிக்கவும் மற்றும் ஆய்வு செய்யவும், அத்தியாவசியப் பொருட்கள் முறையாக விநியோகிக்கப்படுவதை உறுதி செய்யவும் கூட்டுறவுத் துணைப்பதிவாளர் (பொது விநியோகத் திட்டம்) தலைமையில் அர்ப்பணிக்கப்பட்ட பிரிவு உள்ளது.
+                </p>
+            </section>
+
+            <!-- Administrative Set Up Section -->
+            <section id="admin_setup" style="margin-top: 40px;">
+                <h3 class="section-title">
+                    <span class="lang-en">Administrative Set Up</span>
+                    <span class="lang-ta">நிர்வாக அமைப்பு</span>
+                </h3>
+                
+                <div class="officers-container">
+                    <div class="officer-card">
+                        <div class="officer-icon">SS</div>
+                        <div class="officer-info">
+                            <h5 class="lang-en">Satyabrata Sahoo, IAS</h5>
+                            <h5 class="lang-ta">சத்யபிரதா சாஹூ, IAS</h5>
+                            <p class="lang-en">Principal Secretary to Government</p>
+                            <p class="lang-ta">அரசு முதன்மைச் செயலாளர்</p>
+                            <p class="lang-en" style="font-size: 0.75rem;">Cooperation, Food &amp; Consumer Protection Dept.</p>
+                            <p class="lang-ta" style="font-size: 0.75rem;">கூட்டுறவு, உணவு மற்றும் நுகர்வோர் பாதுகாப்புத் துறை</p>
+                        </div>
+                    </div>
+                    <div class="officer-card">
+                        <div class="officer-icon">KN</div>
+                        <div class="officer-info">
+                            <h5 class="lang-en">K. Nanthakumar, I.A.S.</h5>
+                            <h5 class="lang-ta">K. நந்தகுமார், I.A.S.</h5>
+                            <p class="lang-en">Registrar of Cooperative Societies</p>
+                            <p class="lang-ta">கூட்டுறவுச் சங்கங்களின் பதிவாளர்</p>
+                            <p class="lang-en" style="font-size: 0.75rem;">Head of the Cooperative Department</p>
+                            <p class="lang-ta" style="font-size: 0.75rem;">கூட்டுறவுத் துறையின் தலைவர்</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOR-Style Interactive Tabs -->
+                <div class="org-tabs">
+                    <button class="org-tab-btn active" onclick="switchOrgTab('hq')">
+                        <span class="lang-en">Headquarters Setup (RCS)</span>
+                        <span class="lang-ta">தலைமையக அமைப்பு</span>
+                    </button>
+                    <button class="org-tab-btn" onclick="switchOrgTab('district')">
+                        <span class="lang-en">Chengalpattu District Setup</span>
+                        <span class="lang-ta">செங்கல்பட்டு மாவட்ட அமைப்பு</span>
+                    </button>
+                </div>
+
+                <!-- HQ Setup Org Tree -->
+                <div id="org_hq" class="org-tab-content active">
+                    <div class="org-tree">
+                        <div class="org-node highlight">
+                            <span class="lang-en">Registrar of Cooperative Societies (RCS)</span>
+                            <span class="lang-ta">கூட்டுறவுச் சங்கங்களின் பதிவாளர் (RCS)</span>
+                        </div>
+                        <div class="org-connector"></div>
+                        <div class="org-branch-container">
+                            <div class="org-branch">
+                                <div class="org-node sub-node">
+                                    <span class="lang-en">AR (CA) - Consumer &amp; PDS</span>
+                                    <span class="lang-ta">கூடுதல் பதிவாளர் (நுகர்வோர் &amp; PDS)</span>
+                                </div>
+                                <div class="org-connector"></div>
+                                <div class="org-node leaf-node">
+                                    <span class="lang-en">JR (Consumer Cooperatives)</span>
+                                    <span class="lang-ta">இணைப்பதிவாளர் (நுகர்வோர் கூட்டுறவு)</span>
+                                </div>
+                            </div>
+                            <div class="org-branch">
+                                <div class="org-node sub-node">
+                                    <span class="lang-en">AR (F&amp;B) - Credit &amp; Estd.</span>
+                                    <span class="lang-ta">கூடுதல் பதிவாளர் (நிதி &amp; அமைவனம்)</span>
+                                </div>
+                                <div class="org-connector"></div>
+                                <div class="org-node leaf-node">
+                                    <span class="lang-en">JR (Short &amp; Long Loans)</span>
+                                    <span class="lang-ta">இணைப்பதிவாளர் (கடன் பிரிவுகள்)</span>
+                                </div>
+                            </div>
+                            <div class="org-branch">
+                                <div class="org-node sub-node">
+                                    <span class="lang-en">AR (MPD) - Marketing &amp; Dev.</span>
+                                    <span class="lang-ta">கூடுதல் பதிவாளர் (சந்தை &amp; வளர்ச்சி)</span>
+                                </div>
+                                <div class="org-connector"></div>
+                                <div class="org-node leaf-node">
+                                    <span class="lang-en">JR (Statutory &amp; Training)</span>
+                                    <span class="lang-ta">இணைப்பதிவாளர் (சட்டமுறை &amp; பயிற்சி)</span>
+                                </div>
+                            </div>
+                            <div class="org-branch">
+                                <div class="org-node sub-node">
+                                    <span class="lang-en">AR (ICDP) - Dev. Projects</span>
+                                    <span class="lang-ta">கூடுதல் பதிவாளர் (வட்டார கூட்டுறவு திட்டம்)</span>
+                                </div>
+                                <div class="org-connector"></div>
+                                <div class="org-node leaf-node">
+                                    <span class="lang-en">FA &amp; CAO (Finance &amp; Accounts)</span>
+                                    <span class="lang-ta">நிதி ஆலோசகர் &amp; தலைமை கணக்கு அலுவலர்</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- District Setup Org Tree -->
+                <div id="org_district" class="org-tab-content">
+                    <div class="org-tree">
+                        <div class="org-node highlight">
+                            <span class="lang-en">Joint Registrar - Chengalpattu Region</span>
+                            <span class="lang-ta">இணைப்பதிவாளர் - செங்கல்பட்டு மண்டலம்</span>
+                        </div>
+                        <div class="org-connector"></div>
+                        <div class="org-branch-container">
+                            <div class="org-branch" style="flex: 2;">
+                                <div class="org-node sub-node">
+                                    <span class="lang-en">Circle Deputy Registrars</span>
+                                    <span class="lang-ta">வட்டாரத் துணைப்பதிவாளர்கள்</span>
+                                </div>
+                                <div class="org-connector"></div>
+                                <div class="org-branch-container">
+                                    <div class="org-branch">
+                                        <div class="org-node leaf-node">
+                                            <span class="lang-en">Chengalpattu Circle</span>
+                                            <span class="lang-ta">செங்கல்பட்டு வட்டம்</span>
+                                        </div>
+                                        <div class="org-connector"></div>
+                                        <div style="font-size:0.75rem; text-align:center; color:var(--sttl-text-muted);">
+                                            Sub Registrars: 6 | Field Officers: 8<br>Institutions: 95
+                                        </div>
+                                    </div>
+                                    <div class="org-branch">
+                                        <div class="org-node leaf-node">
+                                            <span class="lang-en">Maduranthagam Circle</span>
+                                            <span class="lang-ta">மதுராந்தகம் வட்டம்</span>
+                                        </div>
+                                        <div class="org-connector"></div>
+                                        <div style="font-size:0.75rem; text-align:center; color:var(--sttl-text-muted);">
+                                            Sub Registrars: 6 | Field Officers: 8<br>Institutions: 78
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="org-branch" style="flex: 1;">
+                                <div class="org-node sub-node">
+                                    <span class="lang-en">Deputy Registrar (PDS)</span>
+                                    <span class="lang-ta">துணைப்பதிவாளர் (பொது விநியோகத் திட்டம்)</span>
+                                </div>
+                                <div class="org-connector"></div>
+                                <div class="org-node leaf-node">
+                                    <span class="lang-en">PDS Inspection Wing</span>
+                                    <span class="lang-ta">PDS ஆய்வுப் பிரிவு</span>
+                                </div>
+                                <div class="org-connector"></div>
+                                <div style="font-size:0.75rem; text-align:center; color:var(--sttl-text-muted);">
+                                    Sub Registrars: 1 | Field Officers: 8<br>Fair Price Shops: 852
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Head Office Section -->
+            <section id="ofc_setup" style="margin-top: 40px;">
+                <h3 class="section-title">
+                    <span class="lang-en">Head Office Details</span>
+                    <span class="lang-ta">தலைமை அலுவலக விவரங்கள்</span>
+                </h3>
+                <div class="contact-container">
+                    <div class="contact-card-title">
+                        <span class="lang-en">Office of the Registrar of Cooperative Societies</span>
+                        <span class="lang-ta">கூட்டுறவுச் சங்கங்களின் பதிவாளர் அலுவலகம்</span>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-row">
+                            <span class="contact-label">
+                                <span class="lang-en">Building:</span>
+                                <span class="lang-ta">கட்டடம்:</span>
+                            </span>
+                            <span class="contact-value">NVN Natarajan Maligai</span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-label">
+                                <span class="lang-en">Address:</span>
+                                <span class="lang-ta">முகவரி:</span>
+                            </span>
+                            <span class="contact-value">No.170, Periyar E.V.R. High Road, Kilpauk, Chennai - 600 010, Tamilnadu.</span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-label">
+                                <span class="lang-en">Phone:</span>
+                                <span class="lang-ta">தொலைபேசி:</span>
+                            </span>
+                            <span class="contact-value"><a href="tel:04428364858">044-2836 4858</a></span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-label">
+                                <span class="lang-en">Fax:</span>
+                                <span class="lang-ta">தொலைநகல்:</span>
+                            </span>
+                            <span class="contact-value">044-2836 4867</span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-label">
+                                <span class="lang-en">Email:</span>
+                                <span class="lang-ta">மின்னஞ்சல்:</span>
+                            </span>
+                            <span class="contact-value"><a href="mailto:rcs.tn@nic.in">rcs.tn@nic.in</a></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cooperative Societies Directory Section -->
+            <section id="societies_setup" style="margin-top: 40px;">
+                <h3 class="section-title">
+                    <span class="lang-en">Cooperative Societies in Chengalpattu</span>
+                    <span class="lang-ta">செங்கல்பட்டு மண்டல கூட்டுறவு நிறுவனங்கள்</span>
+                </h3>
+                <p class="intro-paragraph lang-en" style="margin-bottom: 15px;">
+                    Below is the list of cooperative societies active under the control of the Joint Registrar of Cooperative Societies in Chengalpattu Region. You can filter the data by Circle or search for specific society types.
+                </p>
+                <p class="intro-paragraph lang-ta" style="margin-bottom: 15px;">
+                    செங்கல்பட்டு மண்டல கூட்டுறவுச் சங்கங்களின் இணைப்பதிவாளர் கட்டுப்பாட்டில் செயல்படும் கூட்டுறவு நிறுவனங்களின் பட்டியல் கீழே கொடுக்கப்பட்டுள்ளது. குறிப்பிட்ட வட்ட வாரியாகத் தரவை வடிகட்டலாம் அல்லது தேடலாம்.
+                </p>
+                
+                <div class="societies-filter-container">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" onclick="filterSocieties('all')">
+                            <span class="lang-en">All Circles</span>
+                            <span class="lang-ta">அனைத்தும்</span>
+                        </button>
+                        <button class="filter-btn" onclick="filterSocieties('chengalpattu')">
+                            <span class="lang-en">Chengalpattu Circle</span>
+                            <span class="lang-ta">செங்கல்பட்டு வட்டம்</span>
+                        </button>
+                        <button class="filter-btn" onclick="filterSocieties('maduranthagam')">
+                            <span class="lang-en">Maduranthagam Circle</span>
+                            <span class="lang-ta">மதுராந்தகம் வட்டம்</span>
+                        </button>
+                    </div>
+                    <input type="text" id="societySearch" class="search-input" onkeyup="searchTable()" placeholder="Search society type / தேடுக...">
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="data-table" id="societiesTable">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>
+                                    <span class="lang-en">Type of Cooperative Institution</span>
+                                    <span class="lang-ta">கூட்டுறவு நிறுவனத்தின் வகை</span>
+                                </th>
+                                <th>
+                                    <span class="lang-en">Chengalpattu</span>
+                                    <span class="lang-ta">செங்கல்பட்டு</span>
+                                </th>
+                                <th>
+                                    <span class="lang-en">Maduranthagam</span>
+                                    <span class="lang-ta">மதுராந்தகம்</span>
+                                </th>
+                                <th>
+                                    <span class="lang-en">Total</span>
+                                    <span class="lang-ta">மொத்தம்</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-circle="both">
+                                <td>1</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">Central Cooperative Bank</span>
+                                    <span class="lang-ta">மத்திய கூட்டுறவு வங்கி</span>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr data-circle="chengalpattu">
+                                <td>2</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">District Consumer Cooperative Wholesale Store (Chennai HQ)</span>
+                                    <span class="lang-ta">மாவட்ட நுகர்வோர் கூட்டுறவு மொத்த விற்பனை பண்டகசாலை (சென்னை தலைமையகம்)</span>
+                                </td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr data-circle="both">
+                                <td>3</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">District Cooperative Printing Press</span>
+                                    <span class="lang-ta">மாவட்ட கூட்டுறவு அச்சகம்</span>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr data-circle="chengalpattu">
+                                <td>4</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">District Cooperative Union</span>
+                                    <span class="lang-ta">மாவட்ட கூட்டுறவு ஒன்றியம்</span>
+                                </td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr data-circle="both">
+                                <td>5</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">Cooperative Urban Banks</span>
+                                    <span class="lang-ta">கூட்டுறவு நகர வங்கிகள்</span>
+                                </td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr data-circle="both">
+                                <td>6</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">Primary Cooperative Agricultural and Rural Development Bank</span>
+                                    <span class="lang-ta">தொடக்க கூட்டுறவு வேளாண்மை மற்றும் ஊரக வளர்ச்சி வங்கிகள் (நில மேம்பாட்டு வங்கி)</span>
+                                </td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr data-circle="both">
+                                <td>7</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">Primary Agricultural Cooperative Credit Societies (PACS)</span>
+                                    <span class="lang-ta">தொடக்க வேளாண்மை கூட்டுறவு கடன் சங்கங்கள் (PACS)</span>
+                                </td>
+                                <td>25</td>
+                                <td>66</td>
+                                <td style="font-weight: bold; color: var(--sttl-color-secondary);">91</td>
+                            </tr>
+                            <tr data-circle="both">
+                                <td>8</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">Urban Cooperative Credit Societies</span>
+                                    <span class="lang-ta">நகர கூட்டுறவு கடன் சங்கங்கள்</span>
+                                </td>
+                                <td>10</td>
+                                <td>1</td>
+                                <td>11</td>
+                            </tr>
+                            <tr data-circle="maduranthagam">
+                                <td>9</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">Agricultural Producers Cooperative Marketing Societies</span>
+                                    <span class="lang-ta">வேளாண்மை உற்பத்தியாளர்கள் கூட்டுறவு விற்பனைச் சங்கங்கள்</span>
+                                </td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr data-circle="chengalpattu">
+                                <td>10</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">Primary Consumer Cooperative Stores</span>
+                                    <span class="lang-ta">பிரதம கூட்டுறவு பண்டகசாலைகள்</span>
+                                </td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>6</td>
+                            </tr>
+                            <tr data-circle="both">
+                                <td>11</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">Employees Cooperative Thrift and Credit Societies</span>
+                                    <span class="lang-ta">பணியாளர்கள் கூட்டுறவு சிக்கன நாணய கடன் சங்கங்கள்</span>
+                                </td>
+                                <td>29</td>
+                                <td>5</td>
+                                <td>34</td>
+                            </tr>
+                            <tr data-circle="both">
+                                <td>12</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">Student Cooperative Stores</span>
+                                    <span class="lang-ta">மாணவர் கூட்டுறவு பண்டகசாலைகள்</span>
+                                </td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>5</td>
+                            </tr>
+                            <tr data-circle="both">
+                                <td>13</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">Industrial Contract Cooperative Societies</span>
+                                    <span class="lang-ta">தொழில் ஒப்பந்த கூட்டுறவு சங்கங்கள்</span>
+                                </td>
+                                <td>10</td>
+                                <td>3</td>
+                                <td>13</td>
+                            </tr>
+                            <tr data-circle="both">
+                                <td>14</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">Special Type Cooperative Societies</span>
+                                    <span class="lang-ta">தனிவகை சங்கங்கள்</span>
+                                </td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>6</td>
+                            </tr>
+                            <tr data-circle="chengalpattu">
+                                <td>15</td>
+                                <td class="highlight-cell">
+                                    <span class="lang-en">Women Self Help Group Cooperatives</span>
+                                    <span class="lang-ta">மகளிர் சுய உதவிக்குழு கூட்டுறவு சங்கம்</span>
+                                </td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr style="background-color: var(--sttl-color-gray); font-weight: bold; border-top: 2px solid var(--sttl-color-primary);">
+                                <td></td>
+                                <td>
+                                    <span class="lang-en">Total Cooperative Societies</span>
+                                    <span class="lang-ta">மொத்த கூட்டுறவு சங்கங்கள்</span>
+                                </td>
+                                <td id="totalChengalpattu">95</td>
+                                <td id="totalMaduranthagam">78</td>
+                                <td id="totalAll" style="color:var(--sttl-color-primary); font-size:1.05rem; font-weight:800;">175</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Cooperative Tier System Section -->
+            <section id="tier_setup" style="margin-top: 40px;">
+                <h3 class="section-title">
+                    <span class="lang-en">Cooperative Tier System</span>
+                    <span class="lang-ta">கூட்டுறவு அடுக்கு முறை</span>
+                </h3>
+                <p class="intro-paragraph lang-en">
+                    The cooperative setup operates in a multi-tier structure from Apex/State Level down to Primary/Grassroots levels.
+                </p>
+                <p class="intro-paragraph lang-ta">
+                    கூட்டுறவு அமைப்பானது மாநில அளவில் இருந்து உள்ளூர்/தொடக்க நிலை வரை பல அடுக்கு கட்டமைப்பில் செயல்படுகிறது.
+                </p>
+
+                <div class="tier-system-grid">
+                    <div class="tier-card">
+                        <div class="tier-title">
+                            <span class="lang-en">Short Term Credit</span>
+                            <span class="lang-ta">குறுகிய கால கடன்</span>
+                        </div>
+                        <div class="tier-box">TNSCB (State Apex)</div>
+                        <div class="tier-arrow">&darr;</div>
+                        <div class="tier-box">DCCB (District Level)</div>
+                        <div class="tier-arrow">&darr;</div>
+                        <div class="tier-box">PACS (Primary Grassroots)</div>
+                    </div>
+                    <div class="tier-card">
+                        <div class="tier-title">
+                            <span class="lang-en">Long Term Credit</span>
+                            <span class="lang-ta">நீண்ட கால கடன்</span>
+                        </div>
+                        <div class="tier-box">SLDB (State Bank)</div>
+                        <div class="tier-arrow">&darr;</div>
+                        <div class="tier-box">PLDB (Primary Bank)</div>
+                    </div>
+                    <div class="tier-card">
+                        <div class="tier-title">
+                            <span class="lang-en">Cooperative Marketing</span>
+                            <span class="lang-ta">கூட்டுறவு சந்தைப்படுத்தல்</span>
+                        </div>
+                        <div class="tier-box">TANFED (State Federation)</div>
+                        <div class="tier-arrow">&darr;</div>
+                        <div class="tier-box">TANFED (Regional Store)</div>
+                        <div class="tier-arrow">&darr;</div>
+                        <div class="tier-box">PACS - Consumer Cell</div>
+                    </div>
+                    <div class="tier-card">
+                        <div class="tier-title">
+                            <span class="lang-en">Public Distribution</span>
+                            <span class="lang-ta">பொது விநியோகம்</span>
+                        </div>
+                        <div class="tier-box">Civil Supplies Corp</div>
+                        <div class="tier-arrow">&darr;</div>
+                        <div class="tier-box">District DSO / PDS DR</div>
+                        <div class="tier-arrow">&darr;</div>
+                        <div class="tier-box">PACS - Fair Price Shops</div>
+                    </div>
+                    <div class="tier-card">
+                        <div class="tier-title">
+                            <span class="lang-en">Urban Banking</span>
+                            <span class="lang-ta">நகர வங்கிகள்</span>
+                        </div>
+                        <div class="tier-box">TNFCUB (Federation)</div>
+                        <div class="tier-arrow">&darr;</div>
+                        <div class="tier-box">UCB (Urban Banks)</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Government Initiatives Section -->
+            <section id="initiatives_setup" style="margin-top: 40px;">
+                <h3 class="section-title">
+                    <span class="lang-en">Government Initiatives</span>
+                    <span class="lang-ta">அரசின் முன்முயற்சிகள்</span>
+                </h3>
+
+                <div class="initiatives-grid">
+                    <div class="initiative-card">
+                        <span class="initiative-badge">Healthcare</span>
+                        <h4>
+                            <span class="lang-en">Mudhalvar Marundhagam (Chief Minister's Pharmacy)</span>
+                            <span class="lang-ta">முதல்வர் மருந்தகம்</span>
+                        </h4>
+                        <p class="lang-en">
+                            <strong>8 cooperative pharmacies</strong> operate in the Chengalpattu region, offering a <strong>20% discount</strong> on generic and ethical medicines to the general public. Additionally, 4 more pharmacies are being set up under the Jan Aushadhi Kendra scheme for 2024-2025.
+                        </p>
+                        <p class="lang-ta">
+                            செங்கல்பட்டு மண்டலத்தில் <strong>8 கூட்டுறவு மருந்தகங்கள்</strong> பொதுமக்களுக்கு மருந்துகளின் விலையில் <strong>20% தள்ளுபடி</strong> வழங்கி வருகின்றன. மேலும், 2024-2025 ஆம் ஆண்டிற்கான ஜன் அவுஷதி கேந்திரா திட்டத்தின் கீழ் மேலும் 4 மருந்தகங்கள் அமைக்கப்பட்டு வருகின்றன.
+                        </p>
+                    </div>
+
+                    <div class="initiative-card">
+                        <span class="initiative-badge">Agriculture</span>
+                        <h4>
+                            <span class="lang-en">Village Level Custom Hiring Centres</span>
+                            <span class="lang-ta">கிராம அளவிலான வாடகை மையங்கள்</span>
+                        </h4>
+                        <p class="lang-en">
+                            <strong>24 hiring centres</strong> were established in 2023-2024 to provide modern agricultural machinery and tools to farmers at affordable rental rates. Plans are active to launch 5 additional centres in 2024-2025.
+                        </p>
+                        <p class="lang-ta">
+                            விவசாயிகளுக்கு நவீன விவசாய இயந்திரங்கள் மற்றும் கருவிகளை மலிவு விலையில் வாடகைக்கு வழங்குவதற்காக 2023-2024 இல் <strong>24 வாடகை மையங்கள்</strong> நிறுவப்பட்டன. 2024-2025 இல் மேலும் 5 மையங்களை தொடங்க திட்டமிடப்பட்டுள்ளது.
+                        </p>
+                    </div>
+
+                    <div class="initiative-card">
+                        <span class="initiative-badge">Digital India</span>
+                        <h4>
+                            <span class="lang-en">CO-OP e-Vaadagai</span>
+                            <span class="lang-ta">கூட்டுறவு இ-வாடகை செயலி</span>
+                        </h4>
+                        <p class="lang-en">
+                            A dedicated digital portal and application at <a href="https://rcs.tn.gov.in/rcsweb/evaadagai" target="_blank" rel="noopener noreferrer" class="external-nav-link">rcs.tn.gov.in/rcsweb/evaadagai ↗</a> (and integrated with the <strong>Uzhavan App</strong>) that allows farmers to register and book agricultural machinery online from their local cooperatives.
+                        </p>
+                        <p class="lang-ta">
+                            விவசாயிகள் தங்களது உள்ளூர் கூட்டுறவு சங்கங்களில் இருந்து விவசாய இயந்திரங்களை ஆன்லைனில் பதிவு செய்ய உதவும் வகையில் <a href="https://rcs.tn.gov.in/rcsweb/evaadagai" target="_blank" rel="noopener noreferrer" class="external-nav-link">rcs.tn.gov.in/rcsweb/evaadagai ↗</a> இல் பிரத்யேக இ-வாடகை போர்டல் மற்றும் <strong>உழவன் செயலி</strong> ஒருங்கிணைக்கப்பட்டுள்ளது.
+                        </p>
+                    </div>
+
+                    <div class="initiative-card">
+                        <span class="initiative-badge">Social Welfare</span>
+                        <h4>
+                            <span class="lang-en">Thayumanavar Scheme</span>
+                            <span class="lang-ta">தாயுமானவர் திட்டம்</span>
+                        </h4>
+                        <p class="lang-en">
+                            Launched on <strong>12.08.2025</strong> to deliver PDS goods directly to the doorsteps of elderly (70+ years) and differently-abled cardholders. Reaches <strong>21,70,454 beneficiaries</strong> across <strong>16,73,333 family cards</strong> using 34,809 Fair Price Shops.
+                        </p>
+                        <p class="lang-ta">
+                            முதியவர்கள் (70+ வயது) மற்றும் மாற்றுத்திறனாளிகளின் இல்லங்களுக்கே சென்று அத்தியாவசிய ரேஷன் பொருட்களை வழங்குவதற்காக <strong>12.08.2025</strong> அன்று தொடங்கப்பட்டது. 34,809 நியாயவிலைக் கடைகள் மூலம் <strong>16,73,333 குடும்ப அட்டைகளில்</strong> உள்ள <strong>21,70,454 பயனாளிகளை</strong> இத்திட்டம் சென்றடைகிறது.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loan Waiver Dashboard Section (DOR Metric Style) -->
+            <section id="waiver_setup" style="margin-top: 40px;">
+                <h3 class="section-title">
+                    <span class="lang-en">Loan Waiver Schemes (2021)</span>
+                    <span class="lang-ta">கடன் தள்ளுபடி திட்டங்கள் (2021)</span>
+                </h3>
+                <p class="intro-paragraph lang-en">
+                    The Government of Tamil Nadu initiated massive loan waivers to protect farming livelihoods and support self-help group members. The regional waiver achievements in Chengalpattu are detailed below:
+                </p>
+                <p class="intro-paragraph lang-ta">
+                    விவசாயிகளின் வாழ்வாதாரத்தைப் பாதுகாக்கவும், சுயஉதவிக் குழு உறுப்பினர்களை ஆதரிக்கவும் தமிழ்நாடு அரசு பெருமளவில் கடன் தள்ளுபடிகளை வழங்கி உள்ளது. செங்கல்பட்டு மண்டலத்தில் இத்திட்டங்களின் சாதனைகள் கீழே விரிவாகக் கொடுக்கப்பட்டுள்ளன:
+                </p>
+
+                <div class="waiver-dashboard">
+                    <div class="waiver-header">
+                        <h4>
+                            <span class="lang-en">Chengalpattu Region Waiver Metrics</span>
+                            <span class="lang-ta">செங்கல்பட்டு மண்டல கடன் தள்ளுபடி விவரங்கள்</span>
+                        </h4>
+                    </div>
+                    <div class="waiver-stats-grid">
+                        <div class="waiver-stat-box">
+                            <div class="waiver-stat-title">
+                                <span class="lang-en">Crop Loan Waiver</span>
+                                <span class="lang-ta">பயிர்க்கடன் தள்ளுபடி</span>
+                            </div>
+                            <div class="waiver-stat-value">₹123.24 Cr</div>
+                            <div class="waiver-stat-beneficiaries">
+                                <span class="lang-en">17,227 Farmers Benefited</span>
+                                <span class="lang-ta">17,227 விவசாயிகள் பயன்பெற்றனர்</span>
+                            </div>
+                        </div>
+                        <div class="waiver-stat-box">
+                            <div class="waiver-stat-title">
+                                <span class="lang-en">Jewel Loan Waiver</span>
+                                <span class="lang-ta">நகைக்கடன் தள்ளுபடி</span>
+                            </div>
+                            <div class="waiver-stat-value">₹74.04 Cr</div>
+                            <div class="waiver-stat-beneficiaries">
+                                <span class="lang-en">15,584 Beneficiaries Relieved</span>
+                                <span class="lang-ta">15,584 பயனாளிகள் பயனடைந்தனர்</span>
+                            </div>
+                        </div>
+                        <div class="waiver-stat-box">
+                            <div class="waiver-stat-title">
+                                <span class="lang-en">Women SHG Loan Waiver</span>
+                                <span class="lang-ta">சுயஉதவிக்குழு கடன் தள்ளுபடி</span>
+                            </div>
+                            <div class="waiver-stat-value">₹29.41 Cr</div>
+                            <div class="waiver-stat-beneficiaries">
+                                <span class="lang-en">12,486 SHG Members Supported</span>
+                                <span class="lang-ta">12,486 உறுப்பினர்கள் பயன்பெற்றனர்</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Credit & Loan Schemes Section -->
+            <section id="credit_setup" style="margin-top: 40px;">
+                <h3 class="section-title">
+                    <span class="lang-en">Key Credit &amp; Loan Schemes</span>
+                    <span class="lang-ta">முக்கிய கடன் திட்டங்கள்</span>
+                </h3>
+                
+                <h4 class="subsection-title">
+                    <span class="lang-en">1. Crop Loan Scheme (Kisan Credit Card - KCC)</span>
+                    <span class="lang-ta">1. பயிர்க் கடன் திட்டம் (KCC)</span>
+                </h4>
+                <p class="intro-paragraph lang-en">
+                    Provided at an interest rate of <strong>7%</strong> for crop cultivation expenses through PACS. RBI rules allow collateral-free crop loans up to <strong>₹2.00 Lakhs</strong> and up to <strong>₹3.00 Lakhs</strong> with minimal collateral. The crop loan cover includes cash, seeds, chemical fertilizers, and pesticides.
+                </p>
+                <p class="intro-paragraph lang-ta">
+                    PACS கூட்டுறவுச் சங்கங்கள் மூலம் பயிர்ச் சாகுபடிச் செலவுகளுக்காக <strong>7%</strong> வட்டி விகிதத்தில் பயிர்க்கடன் வழங்கப்படுகிறது. ரிசர்வ் வங்கியின் வழிகாட்டுதலின்படி <strong>₹2.00 லட்சம்</strong> வரை பிணையின்றி பயிர்க்கடனும், <strong>₹3.00 லட்சம்</strong> வரை குறைந்த பிணையுடன் கடனும் வழங்கப்படுகிறது. இதில் ரொக்கம், விதைகள், உரங்கள் மற்றும் பூச்சிக்கொல்லிகள் ஆகியவை அடங்கும்.
+                </p>
+
+                <h4 class="subsection-title">
+                    <span class="lang-en">2. TABCEDCO Entrepreneur Loan</span>
+                    <span class="lang-ta">2. TABCEDCO தொழில்முனைவோர் கடன்</span>
+                </h4>
+                <p class="intro-paragraph lang-en">
+                    Designed for BC and MBC individuals with annual incomes under <strong>₹5.00 Lakhs</strong> to start local business ventures. Offers loans up to <strong>₹25.00 Lakhs</strong> at competitive interest rates ranging from <strong>6% to 9%</strong>.
+                </p>
+                <p class="intro-paragraph lang-ta">
+                    ஆண்டு வருமானம் <strong>₹5.00 லட்சத்திற்கும்</strong> குறைவாக உள்ள BC மற்றும் MBC வகுப்பைச் சேர்ந்த தனிநபர்கள் தொழில் தொடங்க வழங்கப்படுகிறது. இத்திட்டத்தின் கீழ் <strong>₹25.00 லட்சம்</strong> வரை <strong>6% முதல் 9%</strong> வட்டி விகிதத்தில் கடன் உதவி வழங்கப்படுகிறது.
+                </p>
+
+                <div class="apply-section" style="margin-top: 30px; padding: 22px; background: var(--sttl-color-gray); border-radius: var(--radius-md); border-left: 5px solid var(--sttl-color-secondary);">
+                    <h4 style="color: var(--sttl-color-primary); margin-bottom: 8px;">
+                        <span class="lang-en">Online Loan Application Portal</span>
+                        <span class="lang-ta">ஆன்லைன் கடன் விண்ணப்பப் பிரிவு</span>
+                    </h4>
+                    <p style="margin-bottom: 15px; font-size: 0.92rem; color: var(--sttl-text-dark);">
+                        <span class="lang-en">Submit your loan application securely through the official RCS portal:</span>
+                        <span class="lang-ta">அதிகாரப்பூர்வ RCS போர்டல் மூலம் உங்கள் கடன் விண்ணப்பத்தை பாதுகாப்பாக சமர்ப்பிக்கவும்:</span>
+                    </p>
+                    <a href="https://rcs.tn.gov.in/loan/" target="_blank" rel="noopener noreferrer" class="portal-login-btn external-nav-link" style="display: inline-flex; flex-direction: row; gap: 8px; align-items: center; text-decoration: none;">
+                        <span>Apply for Loan on RCS Portal</span>
+                        <span>↗</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- 7. GIGW / DOR Style External Redirection Modal Dialog -->
+    <div class="external-modal-overlay" id="externalModalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="external-modal-card">
+            <div class="modal-header-area">
+                <div class="modal-shield-icon">🛡️</div>
+                <div>
+                    <h3 id="modalTitle">
+                        <span class="lang-en">External Website Notice</span>
+                        <span class="lang-ta">வெளிப்புற வலைத்தள அறிவிப்பு</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="modal-body-text">
+                <p class="lang-en">
+                    You are being directed to an official external Government portal. Please note that this portal will open securely in a new browser tab.
+                </p>
+                <p class="lang-ta">
+                    நீங்கள் அதிகாரப்பூர்வ தமிழ்நாடு அரசு வலைத்தளத்திற்கு செல்கிறீர்கள். இப்பக்கம் புதிய தாவலில் பாதுகாப்பாக திறக்கப்படும்.
+                </p>
+            </div>
+            <div class="modal-target-url" id="modalTargetUrl">https://...</div>
+            <label class="modal-remember-label">
+                <input type="checkbox" id="modalDontAskAgain">
+                <span>Do not show this security notice for trusted .gov.in sites during this session</span>
+            </label>
+            <div class="modal-buttons">
+                <button class="modal-btn-cancel" onclick="closeExternalModal()">Cancel / ரத்து செய்</button>
+                <button class="modal-btn-proceed" id="modalProceedBtn">
+                    <span>Proceed to Site</span>
+                    <span>↗</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. Site Footer (DOR Style .footerTop & .footer-bottom) -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footerTop">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>
+                        <span class="lang-en">Cooperative Divisions</span>
+                        <span class="lang-ta">கூட்டுறவுப் பிரிவுகள்</span>
+                    </h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#credit_setup">
+                                <span class="lang-en">Credit Cooperatives</span>
+                                <span class="lang-ta">கடன் கூட்டுறவுகள்</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#societies_setup">
+                                <span class="lang-en">Consumer Cooperatives</span>
+                                <span class="lang-ta">நுகர்வோர் கூட்டுறவுகள்</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tier_setup">
+                                <span class="lang-en">Public Distribution System (PDS)</span>
+                                <span class="lang-ta">பொது விநியோகத் திட்டம்</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#initiatives_setup">
+                                <span class="lang-en">Marketing &amp; Development</span>
+                                <span class="lang-ta">சந்தைப்படுத்தல் மற்றும் வளர்ச்சி</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>
+                        <span class="lang-en">Citizen Services</span>
+                        <span class="lang-ta">குடிமக்கள் சேவைகள்</span>
+                    </h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://rcs.tn.gov.in/loan/" target="_blank" rel="noopener noreferrer" class="external-nav-link">
+                                <span class="lang-en">Online Loan Application ↗</span>
+                                <span class="lang-ta">ஆன்லைன் கடன் விண்ணப்பம்</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://rcs.tn.gov.in/rcsweb/evaadagai" target="_blank" rel="noopener noreferrer" class="external-nav-link">
+                                <span class="lang-en">CO-OP e-Vaadagai ↗</span>
+                                <span class="lang-ta">கூட்டுறவு இ-வாடகை</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tnpds.gov.in/" target="_blank" rel="noopener noreferrer" class="external-nav-link">
+                                <span class="lang-en">PDS Smart Card Portal ↗</span>
+                                <span class="lang-ta">ஸ்மார்ட் கார்டு போர்டல்</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tn.gov.in/grievance/" target="_blank" rel="noopener noreferrer" class="external-nav-link">
+                                <span class="lang-en">Grievances Portal (Paniyaalar Naal) ↗</span>
+                                <span class="lang-ta">பணியாளர் நாள் குறைதீர்ப்பு</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>
+                        <span class="lang-en">Legal &amp; Information Acts</span>
+                        <span class="lang-ta">சட்டங்கள் மற்றும் தகவல்கள்</span>
+                    </h4>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://rtionline.tn.gov.in/" target="_blank" rel="noopener noreferrer" class="external-nav-link">
+                                <span class="lang-en">Right to Information (RTI) Portal ↗</span>
+                                <span class="lang-ta">தகவல் அறியும் உரிமை (RTI)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://rcs.tn.gov.in/tncs-act-rules/" target="_blank" rel="noopener noreferrer" class="external-nav-link">
+                                <span class="lang-en">TNCS Act 1983 ↗</span>
+                                <span class="lang-ta">கூட்டுறவுச் சட்டம் 1983</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://rcs.tn.gov.in/tncs-act-rules/" target="_blank" rel="noopener noreferrer" class="external-nav-link">
+                                <span class="lang-en">TNCS Rules 1988 ↗</span>
+                                <span class="lang-ta">கூட்டுறவு விதிகள் 1988</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>
+                        <span class="lang-en">Regional Head Office</span>
+                        <span class="lang-ta">மண்டல தலைமை அலுவலகம்</span>
+                    </h4>
+                    <p class="lang-en" style="color: #cbd5e1; line-height: 1.6; font-size: 0.85rem;">
+                        Office of the Joint Registrar of Cooperative Societies, Chengalpattu Region.<br>
+                        Government of Tamil Nadu, India.<br>
+                        Email: <a href="mailto:rcs.tn@nic.in" style="color:#ffd8a8;">rcs.tn@nic.in</a><br>
+                        Phone: 044-2836 4858
+                    </p>
+                    <p class="lang-ta" style="color: #cbd5e1; line-height: 1.6; font-size: 0.82rem; margin-top: 8px;">
+                        கூட்டுறவுச் சங்கங்களின் இணைப்பதிவாளர் அலுவலகம், செங்கல்பட்டு மண்டலம்.<br>
+                        தமிழ்நாடு அரசு, இந்தியா.<br>
+                        மின்னஞ்சல்: <a href="mailto:rcs.tn@nic.in" style="color:#ffd8a8;">rcs.tn@nic.in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <div>
+                    <p>
+                        Copyright &copy; 2026, All Rights Reserved — <a href="#main-content">REGISTRAR OF COOPERATIVE SOCIETIES</a> | Government of Tamil Nadu.
+                    </p>
+                    <p style="font-size:0.75rem; color:#94a3b8; margin-top: 4px;">
+                        Compliance with Guidelines for Indian Government Websites (GIGW 2.0) &amp; W3C WCAG 2.0 AA. Designed &amp; Maintained with <a href="https://trophysystems.in/" target="_blank" rel="noopener noreferrer" class="external-nav-link">Trophy Systems ↗</a>
+                    </p>
+                </div>
+                <div>
+                    <span>Visitors: </span>
+                    <span class="visitor-count-badge">0147829</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

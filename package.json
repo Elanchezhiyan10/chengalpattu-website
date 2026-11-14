@@ -1,0 +1,13 @@
+{
+  "name": "chengalpattu-cooperative-portal",
+  "version": "1.0.0",
+  "description": "Bilingual Portal for Cooperative Food and Consumer Protection Department, Chengalpattu Region",
+  "main": "index.html",
+  "scripts": {
+    "start": "lite-server",
+    "dev": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
